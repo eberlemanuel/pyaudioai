@@ -18,17 +18,6 @@ class OpenAiResponse:
         select a ChatGPT model https://platform.openai.com/docs/guides/gpt (default gpt-3.5-turbo)
     audio_model : str
         select a speech to text model https://platform.openai.com/docs/guides/speech-to-text (default whisper-1)
-
-    Methods
-    -------
-    transcribe(audio_file)
-        Transcribe an audio file to text
-
-    get_text_response(audio_file)
-        Get a text response of an audio file which contains a question
-
-    get_audio_response(audio_file)
-        Get an audio response of an audio file which contains a question
     """
 
     def __init__(self, api_key, model = "gpt-3.5-turbo", audio_model = "whisper-1"):

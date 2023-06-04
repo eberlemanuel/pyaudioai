@@ -16,6 +16,7 @@ setuptools.setup(
         'Documentation': 'https://github.com/eberlemanuel/pyaudioai',
         'Bug Reports': 'https://github.com/eberlemanuel/pyaudioai/issues',
         'Source Code': 'https://github.com/eberlemanuel/pyaudioai',
+        'Source Code Documenetation': 'https://eberlemanuel.github.io/pyaudioai',
     },
     package_dir={'': 'src'},
     packages=setuptools.find_packages(where='src'),

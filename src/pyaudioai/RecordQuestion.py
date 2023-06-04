@@ -14,14 +14,6 @@ class RecordQuestion:
         recording time in seconds
     audio_file : str
         Path to an audio file where the question is stored temporarily.
-
-    Methods
-    -------
-    record()
-        Record the audio file
-
-    delete_file()
-        Delete the temporary generated audio file
     """
 
     __format = pyaudio.paInt16
