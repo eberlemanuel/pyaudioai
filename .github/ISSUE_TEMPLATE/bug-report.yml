@@ -1,0 +1,53 @@
+name: Bug Report
+description: Create a new bug report about the pyaudioai pip package
+title: "[Bug]: "
+labels: ["bug", "triage"]
+assignees:
+  - eberlemanuel
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Also tell us, what did you expect to happen?
+      placeholder: Tell us what you see!
+      value: "A bug happened!"
+    validations:
+      required: true
+  - type: dropdown
+    id: version
+    attributes:
+      label: Version
+      description: What Python version are you running?
+      options:
+        - 3.8
+        - 3.9
+        - 3.10
+        - 3.11
+        - Other
+    validations:
+      required: true
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating System
+      description: What operating system are you seeing the problem on?
+      options:
+        - Windows
+        - Linux Dist
+        - Mac OS X
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant log output
+      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+      render: shell
+    validations:
+      required: true
