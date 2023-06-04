@@ -52,10 +52,10 @@ import os
 import pyaudioai
 
 audio_file = "question.wav" # question can be saved
-question_audio = RecordQuestion(5, audio_file)
+question_audio = pyaudioai.RecordQuestion(5, audio_file)
 question_audio.record()
 
-response_class = OpenAiResponse("<OPENAI_API_KEY>")
+response_class = pyaudioai.OpenAiResponse("<OPENAI_API_KEY>")
 response_class.get_audio_response(audio_file)
 
 question_audio.delete_file() # delete question audio if required
