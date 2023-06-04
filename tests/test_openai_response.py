@@ -2,6 +2,8 @@ import os
 import unittest
 from pyaudioai.OpenAiResponse import OpenAiResponse
 
+__author__ = "Manuel Eberle (info@manueleberle.de)"
+
 class TestOpenAiResponse(unittest.TestCase):
 
     openai_obj = OpenAiResponse(os.getenv("OPENAI_API_KEY"))

@@ -2,6 +2,8 @@ import os
 import unittest
 from pyaudioai.RecordQuestion import RecordQuestion
 
+__author__ = "Manuel Eberle (info@manueleberle.de)"
+
 class TestRecordQuestion(unittest.TestCase):
 
     def test_init(self):

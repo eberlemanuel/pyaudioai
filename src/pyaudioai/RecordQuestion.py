@@ -2,7 +2,27 @@ import os
 import wave
 import pyaudio
 
+__author__ = "Manuel Eberle (info@manueleberle.de)"
+
 class RecordQuestion:
+    """
+    A class used to record an audio file with the computers microphone.
+
+    Attributes
+    ----------
+    recording_time : int
+        recording time in seconds
+    audio_file : str
+        Path to an audio file where the question is stored temporarily.
+
+    Methods
+    -------
+    record()
+        Record the audio file
+
+    delete_file()
+        Delete the temporary generated audio file
+    """
 
     __format = pyaudio.paInt16
     __channel = 2
@@ -10,10 +30,22 @@ class RecordQuestion:
     __chunk = 1024
 
     def __init__(self, recording_time, audio_file):
+        """
+        Parameters
+        ----------
+        recording_time : int
+            recording time in seconds
+        audio_file : str
+            Path to an audio file where the question is stored temporarily.
+        """
+
         self.recording_time = recording_time
         self.audio_file = audio_file
 
     def record(self):
+        """Record the audio file.
+        """
+
         pyaudio_obj = pyaudio.PyAudio()
         audio_stream = pyaudio_obj.open(format=self.__format, channels=self.__channel, rate=self.__rate, input=True, frames_per_buffer=self.__chunk)
         
@@ -36,4 +68,7 @@ class RecordQuestion:
         audio_output.close()
 
     def delete_file(self):
+        """Delete the temporary generated audio file.
+        """
+
         os.remove(self.audio_file)
